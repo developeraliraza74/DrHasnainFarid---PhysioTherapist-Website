@@ -1,705 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Husnain Fareed | Physiotherapist in Sahiwal</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-      .hero-section {
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
-      }
-      .content-overlay {
-        position: relative;
-        z-index: 10;
-        color: white;
-      }
-      .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-          0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      }
-      .vanta-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 font-sans">
-    <nav class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50">
-      <div class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-          <div class="text-2xl font-bold text-indigo-600">
-            Dr. Husnain Fareed
-          </div>
-          <div class="hidden md:flex space-x-8">
-            <a
-              href="#home"
-              class="text-gray-700 hover:text-indigo-600 transition"
-              >Home</a
-            >
-            <a
-              href="#services"
-              class="text-gray-700 hover:text-indigo-600 transition"
-              >Services</a
-            >
-            <a
-              href="#about"
-              class="text-gray-700 hover:text-indigo-600 transition"
-              >About</a
-            >
-            <a
-              href="#contact"
-              class="text-gray-700 hover:text-indigo-600 transition"
-              >Contact</a
-            >
-          </div>
-          <button class="md:hidden focus:outline-none">
-            <i data-feather="menu"></i>
-          </button>
-        </div>
-      </div>
-    </nav>
 
-    <section
-      id="home"
-      class="hero-section bg-indigo-900 flex items-center justify-center"
-    >
-      <div id="vanta-bg" class="vanta-bg"></div>
-      <div class="content-overlay text-center px-6">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-down">
-          Dr. Husnain Fareed
-        </h1>
-        <p
-          class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          Expert Physiotherapist at Al Khidmat Center Sahiwal
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Husnain Fareed | Expert Physiotherapist in Sahiwal</title>
+  <meta name="description"
+    content="Dr. Husnain Fareed — Expert Physiotherapist at Al Khidmat Center Sahiwal. Specializing in back pain, sports injuries, post-surgery rehab, and home visits. Book your appointment today." />
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- THREE.js (Vanta dependency) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- Vanta Globe -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Feather Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- Calendly Widget CSS -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav-main" id="main-nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Dr. Husnain Fareed</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="#appointment" class="nav-cta">Book Appointment</a>
+        </li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#appointment">Book Appointment</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="home" class="hero-section">
+    <div id="vanta-bg" class="vanta-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-aos="fade-down" data-aos-delay="0">
+        <span class="dot"></span> Available for Appointments
+      </div>
+      <h1 class="hero-title" data-aos="fade-down" data-aos-delay="100">
+        <span>Dr. Husnain Fareed</span>
+      </h1>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="250">
+        Expert Physiotherapist at Al Khidmat Center Sahiwal — Restoring
+        movement, relieving pain, and improving quality of life.
+      </p>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+        <a href="#appointment" class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          Book Appointment
+        </a>
+        <a href="#services" class="btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          Our Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ STATS BAR ═══════════════ -->
+  <div class="stats-bar" data-aos="fade-up">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3><span class="stat-number" data-target="500" data-suffix="+">0</span></h3>
+        <p>Happy Patients</p>
+      </div>
+      <div class="stat-item">
+        <h3><span class="stat-number" data-target="5" data-suffix="+">0</span></h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-item">
+        <h3><span class="stat-number" data-target="6" data-suffix="">0</span></h3>
+        <p>Specializations</p>
+      </div>
+      <div class="stat-item">
+        <h3><span class="stat-number" data-target="98" data-suffix="%">0</span></h3>
+        <p>Satisfaction Rate</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ SERVICES ═══════════════ -->
+  <section id="services" class="services-section">
+    <div class="section-heading" data-aos="fade-up">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Specialized Treatments</h2>
+      <p class="section-subtitle">
+        Comprehensive physiotherapy services tailored to your unique needs,
+        using the latest evidence-based techniques.
+      </p>
+    </div>
+    <div class="services-grid">
+      <!-- Card 1 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="service-icon">
+          <i data-feather="activity"></i>
+        </div>
+        <h3>Back & Neck Pain</h3>
+        <p>
+          Effective treatment for chronic and acute back and neck pain using
+          evidence-based techniques.
         </p>
-        <div data-aos="fade-up" data-aos-delay="400">
-          <a
-            href="#contact"
-            class="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-indigo-100 transition duration-300 inline-block"
-          >
-            Book Appointment
-          </a>
-        </div>
       </div>
-    </section>
+      <!-- Card 2 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-icon">
+          <i data-feather="shield"></i>
+        </div>
+        <h3>Sports Injuries</h3>
+        <p>
+          Specialized rehabilitation for athletes to recover from injuries and
+          enhance performance.
+        </p>
+      </div>
+      <!-- Card 3 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="service-icon">
+          <i data-feather="thermometer"></i>
+        </div>
+        <h3>Post-Surgery Physio</h3>
+        <p>
+          Comprehensive rehabilitation programs to restore mobility and
+          strength after surgical procedures.
+        </p>
+      </div>
+      <!-- Card 4 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-icon">
+          <i data-feather="wind"></i>
+        </div>
+        <h3>Knee Pain Relief</h3>
+        <p>
+          Targeted therapies for knee pain including osteoarthritis, ligament
+          injuries, and post-surgical recovery.
+        </p>
+      </div>
+      <!-- Card 5 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="service-icon">
+          <i data-feather="alert-circle"></i>
+        </div>
+        <h3>Sprained Ankle</h3>
+        <p>
+          Effective rehabilitation programs to restore ankle mobility and
+          prevent future injuries.
+        </p>
+      </div>
+      <!-- Card 6 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-icon">
+          <i data-feather="home"></i>
+        </div>
+        <h3>Home Visits</h3>
+        <p>
+          Professional physiotherapy services at your home for patients who
+          cannot visit the clinic.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section id="services" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center mb-16"
-          data-aos="fade-up"
-        >
-          Specialized Treatments
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                  <i data-feather="activity" class="text-indigo-600"></i>
-                </div>
-                <h3 class="text-xl font-semibold">Back & Neck Pain</h3>
-              </div>
-              <p class="text-gray-600">
-                Effective treatment for chronic and acute back and neck pain
-                using evidence-based techniques.
-              </p>
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-image-wrapper" data-aos="fade-right">
+        <img src="doctor.png" alt="Dr. Husnain Fareed — Physiotherapist" />
+      </div>
+      <div class="about-content" data-aos="fade-left">
+        <span class="section-label">Who We Are</span>
+        <h2>About Dr. Husnain Fareed</h2>
+        <p>
+          Dr. Husnain Fareed is a highly skilled and registered
+          physiotherapist practicing at Al Khidmat Center in Sahiwal. With
+          extensive experience in treating various musculoskeletal conditions,
+          Dr. Fareed provides exceptional care tailored to each patient's
+          needs.
+        </p>
+        <p>
+          He specializes in treating back pain, neck pain, sports injuries,
+          post-surgical rehabilitation, and other physiotherapy needs. His
+          patient-centered approach ensures optimal recovery and improved
+          quality of life.
+        </p>
+        <div class="about-badges">
+          <div class="about-badge">
+            <div class="badge-icon green">
+              <i data-feather="check-circle"></i>
             </div>
+            <span>Registered on Marham.pk</span>
           </div>
-
-          <div
-            class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                  <i data-feather="shield" class="text-indigo-600"></i>
-                </div>
-                <h3 class="text-xl font-semibold">Sports Injuries</h3>
-              </div>
-              <p class="text-gray-600">
-                Specialized rehabilitation for athletes to recover from injuries
-                and enhance performance.
-              </p>
+          <div class="about-badge">
+            <div class="badge-icon indigo">
+              <i data-feather="clock"></i>
             </div>
+            <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
           </div>
-
-          <div
-            class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                  <i data-feather="thermometer" class="text-indigo-600"></i>
-                </div>
-                <h3 class="text-xl font-semibold">Post-Surgery Physio</h3>
-              </div>
-              <p class="text-gray-600">
-                Comprehensive rehabilitation programs to restore mobility and
-                strength after surgical procedures.
-              </p>
+          <div class="about-badge">
+            <div class="badge-icon red">
+              <i data-feather="map-pin"></i>
             </div>
-          </div>
-
-          <div
-            class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                  <i data-feather="wind" class="text-indigo-600"></i>
-                </div>
-                <h3 class="text-xl font-semibold">Knee Pain Relief</h3>
-              </div>
-              <p class="text-gray-600">
-                Targeted therapies for knee pain including osteoarthritis,
-                ligament injuries, and post-surgical recovery.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                  <i data-feather="alert-circle" class="text-indigo-600"></i>
-                </div>
-                <h3 class="text-xl font-semibold">Sprained Ankle</h3>
-              </div>
-              <p class="text-gray-600">
-                Effective rehabilitation programs to restore ankle mobility and
-                prevent future injuries.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                  <i data-feather="home" class="text-indigo-600"></i>
-                </div>
-                <h3 class="text-xl font-semibold">Home Visits</h3>
-              </div>
-              <p class="text-gray-600">
-                Professional physiotherapy services at your home for patients
-                who cannot visit the clinic.
-              </p>
-            </div>
+            <span>Al Khidmat Center Sahiwal</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row items-center">
-          <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-            <img
-              src="http://static.photos/medical/640x360/42"
-              alt="Dr. Husnain Fareed"
-              class="rounded-lg shadow-xl w-full"
-            />
-          </div>
-          <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
-              About Dr. Husnain Fareed
-            </h2>
-            <p class="text-gray-600 mb-6">
-              Dr. Husnain Fareed is a highly skilled and registered
-              physiotherapist practicing at Al Khidmat Center in Sahiwal. With
-              extensive experience in treating various musculoskeletal
-              conditions, Dr. Fareed provides exceptional care tailored to each
-              patient's needs.
-            </p>
-            <p class="text-gray-600 mb-6">
-              He specializes in treating back pain, neck pain, sports injuries,
-              post-surgical rehabilitation, and other physiotherapy needs. His
-              patient-centered approach ensures optimal recovery and improved
-              quality of life.
-            </p>
-            <div class="flex items-center mb-4">
-              <i data-feather="check-circle" class="text-green-500 mr-2"></i>
-              <span class="text-gray-700">Registered on Marham.pk</span>
-            </div>
-            <div class="flex items-center mb-4">
-              <i data-feather="clock" class="text-indigo-500 mr-2"></i>
-              <span class="text-gray-700">Available Mon-Sat: 9AM - 6PM</span>
-            </div>
-            <div class="flex items-center">
-              <i data-feather="map-pin" class="text-red-500 mr-2"></i>
-              <span class="text-gray-700">Al Khidmat Center Sahiwal</span>
-            </div>
-          </div>
+  <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+  <section class="testimonials-section">
+    <div class="section-heading" data-aos="fade-up">
+      <span class="section-label" style="background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9);">What Patients
+        Say</span>
+      <h2 class="section-title section-title-light">Patient Testimonials</h2>
+    </div>
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="testimonial-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
         </div>
-      </div>
-    </section>
-
-    <section class="py-16 md:py-20 bg-indigo-900 text-white">
-      <div class="container mx-auto px-4 md:px-6">
-        <h2
-          class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 md:mb-16"
-          data-aos="fade-up"
-        >
-          Patient Testimonials
-        </h2>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
-        >
-          <div
-            class="bg-indigo-800 p-4 md:p-6 rounded-lg h-full flex flex-col"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="flex items-center mb-4">
-              <div class="flex text-yellow-400 mr-2">
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4"></i>
-              </div>
-            </div>
-            <p class="mb-6 flex-grow">
-              "Dr. Fareed's treatment completely relieved my chronic back pain.
-              His professional approach and caring nature made my recovery
-              smooth and effective."
-            </p>
-            <div class="flex items-center">
-              <div
-                class="bg-indigo-700 rounded-full w-10 h-10 flex items-center justify-center mr-3"
-              >
-                <i data-feather="user"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold">Ahmed R.</h4>
-                <p class="text-indigo-300 text-sm">Marham.pk Review</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="bg-indigo-800 p-4 md:p-6 rounded-lg h-full flex flex-col"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="flex items-center mb-4">
-              <div class="flex text-yellow-400 mr-2">
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4"></i>
-              </div>
-            </div>
-            <p class="mb-6 flex-grow">
-              "After my knee surgery, Dr. Husnain's rehabilitation program
-              helped me regain full mobility. His home visit service was
-              especially helpful during my recovery."
-            </p>
-            <div class="flex items-center">
-              <div
-                class="bg-indigo-700 rounded-full w-10 h-10 flex items-center justify-center mr-3"
-              >
-                <i data-feather="user"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold">Fatima S.</h4>
-                <p class="text-indigo-300 text-sm">Marham.pk Review</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="bg-indigo-800 p-4 md:p-6 rounded-lg h-full flex flex-col"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="flex items-center mb-4">
-              <div class="flex text-yellow-400 mr-2">
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4 mr-1"></i>
-                <i data-feather="star" class="fill-current w-4 h-4"></i>
-              </div>
-            </div>
-            <p class="mb-6 flex-grow">
-              "As an athlete, I've had several sports injuries. Dr. Fareed's
-              treatment not only helped me recover faster but also improved my
-              performance with preventive exercises."
-            </p>
-            <div class="flex items-center">
-              <div
-                class="bg-indigo-700 rounded-full w-10 h-10 flex items-center justify-center mr-3"
-              >
-                <i data-feather="user"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold">Usman K.</h4>
-                <p class="text-indigo-300 text-sm">Marham.pk Review</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center mb-16"
-          data-aos="fade-up"
-        >
-          Book an Appointment
-        </h2>
-        <div class="flex flex-col md:flex-row">
-          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8" data-aos="fade-right">
-            <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
-            <div class="space-y-6">
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                  <i data-feather="map-pin" class="text-indigo-600"></i>
-                </div>
-                <div>
-                  <h4 class="font-semibold">Clinic Address</h4>
-                  <p class="text-gray-600">Al Khidmat Center Sahiwal</p>
-                  <a
-                    href="https://maps.app.goo.gl/q95yMwPSkK9BTS4t6"
-                    target="_blank"
-                    class="text-indigo-600 hover:underline"
-                    >View on Map</a
-                  >
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                  <i data-feather="clock" class="text-indigo-600"></i>
-                </div>
-                <div>
-                  <h4 class="font-semibold">Working Hours</h4>
-                  <p class="text-gray-600">
-                    Monday to Saturday: 9:00 AM - 6:00 PM
-                  </p>
-                  <p class="text-gray-600">Sunday: Closed</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                  <i data-feather="phone" class="text-indigo-600"></i>
-                </div>
-                <div>
-                  <h4 class="font-semibold">Contact Number</h4>
-                  <p class="text-gray-600">
-                    Available upon booking through Marham.pk
-                  </p>
-                  <a
-                    href="https://www.marham.pk/doctors/sahiwal/physiotherapist/dr-mr-hasnain-farid"
-                    target="_blank"
-                    class="text-indigo-600 hover:underline"
-                    >Visit Marham Profile</a
-                  >
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                  <i data-feather="home" class="text-indigo-600"></i>
-                </div>
-                <div>
-                  <h4 class="font-semibold">Home Service</h4>
-                  <p class="text-gray-600">
-                    Available for patients who cannot visit the clinic
-                  </p>
-                  <p class="text-gray-600">
-                    (Subject to assessment and availability)
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="md:w-1/2" data-aos="fade-left">
-            <form id="actualForm" class="bg-gray-50 p-8 rounded-lg shadow-md">
-              <div class="mb-6">
-                <label for="name" class="block text-gray-700 font-medium mb-2"
-                  >Full Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-              <div class="mb-6">
-                <label for="phone" class="block text-gray-700 font-medium mb-2"
-                  >Phone Number</label
-                >
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  maxlength="10"
-                  oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-              <div class="mb-6">
-                <label
-                  for="service"
-                  class="block text-gray-700 font-medium mb-2"
-                  >Service Required</label
-                >
-                <select
-                  id="service"
-                  name="service"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                >
-                  <option value="">Select a service</option>
-                  <option value="backpain">Back Pain Treatment</option>
-                  <option value="neckpain">Neck Pain Treatment</option>
-                  <option value="knee">Knee Pain Relief</option>
-                  <option value="sports">Sports Injury</option>
-                  <option value="ankle">Sprained Ankle</option>
-                  <option value="post-surgery">Post-Surgery Physio</option>
-                  <option value="home">Home Service</option>
-                </select>
-              </div>
-              <div class="mb-6">
-                <label for="date" class="block text-gray-700 font-medium mb-2"
-                  >Preferred Date</label
-                >
-                <input
-                  type="datetime-local"
-                  id="date"
-                  name="date"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-              <button
-                type="submit"
-                class="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300"
-              >
-                Request Appointment
-              </button>
-              <div id="status" style="text-align:center"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="bg-gray-900 text-white py-12">
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between">
-          <div class="mb-8 md:mb-0">
-            <h3 class="text-2xl font-bold mb-4">Dr. Husnain Fareed</h3>
-            <p class="text-gray-400 mb-4">Expert Physiotherapist</p>
-            <p class="text-gray-400">Al Khidmat Center Sahiwal</p>
-          </div>
-          <div class="mb-8 md:mb-0">
-            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#home"
-                  class="text-gray-400 hover:text-white transition"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  class="text-gray-400 hover:text-white transition"
-                  >Services</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="text-gray-400 hover:text-white transition"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  class="text-gray-400 hover:text-white transition"
-                  >Contact</a
-                >
-              </li>
-            </ul>
+        <p class="testimonial-text">
+          "Dr. Fareed's treatment completely relieved my chronic back pain.
+          His professional approach and caring nature made my recovery smooth
+          and effective."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <i data-feather="user"></i>
           </div>
           <div>
-            <h4 class="text-lg font-semibold mb-4">Connect</h4>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="bg-gray-800 p-2 rounded-full hover:bg-indigo-600 transition"
-              >
-                <i data-feather="facebook"></i>
-              </a>
-              <a
-                href="#"
-                class="bg-gray-800 p-2 rounded-full hover:bg-blue-400 transition"
-              >
-                <i data-feather="twitter"></i>
-              </a>
-              <a
-                href="https://www.marham.pk/doctors/sahiwal/physiotherapist/dr-mr-hasnain-farid"
-                target="_blank"
-                class="bg-gray-800 p-2 rounded-full hover:bg-green-500 transition"
-              >
-                <i data-feather="link"></i>
-              </a>
-            </div>
+            <div class="testimonial-name">Ahmed R.</div>
+            <div class="testimonial-source">Marham.pk Review</div>
           </div>
         </div>
-        <div
-          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
-        >
-          <p>© 2025 Dr. Husnain Fareed. All rights reserved.</p>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="testimonial-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+        </div>
+        <p class="testimonial-text">
+          "After my knee surgery, Dr. Husnain's rehabilitation program helped
+          me regain full mobility. His home visit service was especially
+          helpful during my recovery."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <i data-feather="user"></i>
+          </div>
+          <div>
+            <div class="testimonial-name">Fatima S.</div>
+            <div class="testimonial-source">Marham.pk Review</div>
+          </div>
         </div>
       </div>
-    </footer>
-    <div id="popup-message" class="fixed inset-0 bg-gray-600 bg-opacity-75 flex items-center justify-center z-[100] transition-opacity duration-300 opacity-0 invisible">
-    <div class="bg-white p-8 rounded-lg shadow-xl text-center max-w-sm w-full transform scale-95 transition-transform duration-300">
-        <div id="popup-icon" class="mb-4">
-            </div>
-        <h3 id="popup-title" class="text-2xl font-bold mb-2"></h3>
-        <p id="popup-text" class="text-gray-600 mb-6"></p>
-        <button id="popup-close-btn" class="bg-indigo-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-indigo-700 transition">
-            Close
-        </button>
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="testimonial-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+        </div>
+        <p class="testimonial-text">
+          "As an athlete, I've had several sports injuries. Dr. Fareed's
+          treatment not only helped me recover faster but also improved my
+          performance with preventive exercises."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <i data-feather="user"></i>
+          </div>
+          <div>
+            <div class="testimonial-name">Usman K.</div>
+            <div class="testimonial-source">Marham.pk Review</div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
 
-    <script>
-    // Initialize Vanta.js globe effect
-    VANTA.GLOBE({
-        el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0x5e35b1,
-        backgroundColor: 0x311b92,
-        size: 1.1,
-    });
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <div class="section-heading" data-aos="fade-up">
+        <span class="section-label">Reach Out</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">
+          Visit us at the clinic, or reach out through any of the channels
+          below. We're here to help you on your path to recovery.
+        </p>
+      </div>
+      <div class="contact-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i data-feather="map-pin"></i>
+          </div>
+          <div>
+            <h4>Clinic Address</h4>
+            <p>Al Khidmat Center Sahiwal</p>
+            <a href="https://maps.app.goo.gl/q95yMwPSkK9BTS4t6" target="_blank">View on Map →</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i data-feather="clock"></i>
+          </div>
+          <div>
+            <h4>Working Hours</h4>
+            <p>Mon – Sat: 9 AM – 6 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i data-feather="phone"></i>
+          </div>
+          <div>
+            <h4>Contact Number</h4>
+            <p>Book through Marham.pk</p>
+            <a href="https://www.marham.pk/doctors/sahiwal/physiotherapist/dr-mr-hasnain-farid" target="_blank">Visit
+              Marham Profile →</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i data-feather="home"></i>
+          </div>
+          <div>
+            <h4>Home Service</h4>
+            <p>Available for patients who cannot visit the clinic</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    // Initialize AOS animation
-    AOS.init({
-        duration: 800,
-        easing: "ease-in-out",
-        once: true,
-    });
+  <!-- ═══════════════ APPOINTMENT / CALENDLY ═══════════════ -->
+  <section id="appointment" class="appointment-section">
+    <div class="appointment-container">
+      <div class="section-heading" data-aos="fade-up">
+        <span class="section-label">Schedule a Visit</span>
+        <h2 class="section-title">Book an Appointment</h2>
+        <p class="section-subtitle">
+          Select a convenient date and time below to schedule your
+          physiotherapy session with Dr. Husnain Fareed.
+        </p>
+      </div>
+      <div class="calendly-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="calendly-inline-widget"
+          data-url="https://calendly.com/anasaltafprojects/physio-therapist?hide_gdpr_banner=1&primary_color=4f46e5">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    // Initialize feather icons
-    feather.replace();
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Dr. Husnain Fareed</h3>
+          <p>
+            Expert Physiotherapist at Al Khidmat Center Sahiwal. Dedicated to
+            restoring movement and relieving pain through personalized,
+            evidence-based treatments.
+          </p>
+          <div class="footer-socials" style="margin-top: 1.25rem;">
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <i data-feather="facebook"></i>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Twitter">
+              <i data-feather="twitter"></i>
+            </a>
+            <a href="https://www.marham.pk/doctors/sahiwal/physiotherapist/dr-mr-hasnain-farid" target="_blank"
+              class="footer-social-link" aria-label="Marham Profile">
+              <i data-feather="link"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#appointment">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Back & Neck Pain</a></li>
+            <li><a href="#services">Sports Injuries</a></li>
+            <li><a href="#services">Post-Surgery Rehab</a></li>
+            <li><a href="#services">Knee Pain Relief</a></li>
+            <li><a href="#services">Home Visits</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Dr. Husnain Fareed. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-    // --- Form and Popup Logic ---
-    const form = document.getElementById("actualForm");
-    const status = document.getElementById("status");
-    const scriptURL = "https://script.google.com/macros/s/AKfycbw2W1pwxRNJN6FxeW8kRbTszVdyc5ptPDYsZGPwyb9CNEOWgX1LNoHQODZ7uOQ3EWcL/exec";
+  <!-- Calendly Widget Script -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-    // Popup elements
-    const popupMessage = document.getElementById("popup-message");
-    const popupIcon = document.getElementById("popup-icon");
-    const popupTitle = document.getElementById("popup-title");
-    const popupText = document.getElementById("popup-text");
-    const popupCloseBtn = document.getElementById("popup-close-btn");
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
 
-    // Function to show the popup
-    function showPopup(isSuccess) {
-        if (isSuccess) {
-            popupIcon.innerHTML = `<img src="https://static.vecteezy.com/system/resources/thumbnails/025/210/773/small_2x/check-mark-icon-transparent-background-checkmark-icon-approved-symbol-confirmation-sign-design-elements-checklist-positive-thinking-sign-correct-answer-verified-badge-flat-icon-png.png" alt="Success" class="h-16 mx-auto mb-4" />`;
-            popupTitle.textContent = "Appointment Confirmed!";
-            popupText.textContent = "Your appointment request has been sent successfully. We will contact you soon.";
-            popupTitle.className = "text-2xl font-bold mb-2 text-green-600";
-        } else {
-            popupIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-red-500 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>`;
-            popupTitle.textContent = "Something Went Wrong!";
-            popupText.textContent = "An error occurred while booking. Please try again or contact us directly.";
-            popupTitle.className = "text-2xl font-bold mb-2 text-red-600";
-        }
-        popupMessage.classList.remove("opacity-0", "invisible");
-        document.body.classList.add("overflow-hidden");
-    }
-
-    // Function to hide the popup
-    function hidePopup() {
-        popupMessage.classList.add("opacity-0", "invisible");
-        document.body.classList.remove("overflow-hidden");
-    }
-
-    // Close button event listener
-    popupCloseBtn.addEventListener("click", hidePopup);
-
-    // Form submission event listener
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        status.textContent = "Booking...";
-        status.style.color = "#e0e0e0";
-
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-            .then(response => {
-                if (response.ok) {
-                    showPopup(true);
-                    form.reset();
-                    status.textContent = "";
-                } else {
-                    throw new Error('Network response was not ok');
-                }
-            })
-            .catch(error => {
-                console.error("Error!", error.message);
-                showPopup(false);
-                status.textContent = "";
-            });
-    });
-</script>
-  </body>
 </html>
-
-
-
-
-
-
-
