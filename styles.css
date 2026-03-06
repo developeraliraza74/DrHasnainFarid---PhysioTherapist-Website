@@ -776,6 +776,21 @@ body {
   text-decoration: underline;
 }
 
+/* — Map Embed — */
+.map-wrapper {
+  margin-top: 2.5rem;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.map-wrapper iframe {
+  display: block;
+  width: 100%;
+  min-height: 400px;
+}
+
 /* — Appointment / Calendly Section — */
 .appointment-section {
   padding: 6rem 0 4rem;
