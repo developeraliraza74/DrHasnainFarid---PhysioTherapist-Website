@@ -135,6 +135,8 @@ document.addEventListener("DOMContentLoaded", function () {
     animateCounters();
 });
 
+// Testimonials 
+
 const testimonials = [
   {
     name: "Zarahabib",
@@ -229,3 +231,149 @@ function renderTestimonials() {
 }
 
 document.addEventListener("DOMContentLoaded", renderTestimonials);
+
+
+
+// Services
+
+
+const services = [
+  {
+    category: "We Treat",
+    icon: "activity",
+    title: "Back Pain",
+    desc: "Effective treatment for acute and chronic lower, mid, and upper back pain using manual therapy and targeted exercises.",
+  },
+  {
+    category: "We Treat",
+    icon: "alert-circle",
+    title: "Neck Pain",
+    desc: "Relief from cervical pain, stiffness, and nerve compression through specialized neck physiotherapy techniques.",
+  },
+  {
+    category: "We Treat",
+    icon: "wind",
+    title: "Frozen Shoulder",
+    desc: "Proven treatment for adhesive capsulitis — restoring full shoulder mobility, often within days of starting sessions.",
+  },
+  {
+    category: "We Treat",
+    icon: "zap",
+    title: "Arm Pain",
+    desc: "Treatment for arm pain, muscle weakness, and nerve-related conditions affecting the upper limb and elbow.",
+  },
+  {
+    category: "We Treat",
+    icon: "trending-down",
+    title: "Knee Pain",
+    desc: "Targeted therapy for knee pain, osteoarthritis, ligament injuries, and post-surgical knee rehabilitation.",
+  },
+  {
+    category: "We Treat",
+    icon: "map-pin",
+    title: "Heel Pain",
+    desc: "Treatment for plantar fasciitis, heel spurs, and Achilles-related issues that cause walking difficulty.",
+  },
+
+  // ── Our Services ──
+  {
+    category: "Services",
+    icon: "thermometer",
+    title: "Post-Operative Physio",
+    desc: "Structured recovery programs after surgery — restoring strength, mobility, and function in the shortest time possible.",
+  },
+  {
+    category: "Services",
+    icon: "heart",
+    title: "Stroke Rehabilitation",
+    desc: "Neurological physiotherapy to help stroke patients regain movement, balance, and independence in daily life.",
+  },
+  {
+    category: "Services",
+    icon: "users",
+    title: "CP Child Physiotherapy",
+    desc: "Gentle, specialized physiotherapy for children with cerebral palsy — improving motor skills and quality of life.",
+  },
+  {
+    category: "Services",
+    icon: "shield",
+    title: "Sports Injuries Rehabilitation",
+    desc: "Fast-track recovery for athletes — from sprains and fractures to ligament tears and muscle injuries.",
+  },
+
+  // ── Specialized In ──
+  {
+    category: "Specialized",
+    icon: "box",
+    title: "Orthopedic Physiotherapy",
+    desc: "Expert management of bone, joint, and musculoskeletal conditions for patients of all ages.",
+  },
+  {
+    category: "Specialized",
+    icon: "smile",
+    title: "Paediatric Physiotherapy",
+    desc: "Child-focused physiotherapy for developmental delays, injuries, and conditions like cerebral palsy.",
+  },
+  {
+    category: "Specialized",
+    icon: "user",
+    title: "Geriatric Physiotherapy",
+    desc: "Tailored physiotherapy for elderly patients — improving mobility, reducing fall risk, and managing age-related conditions.",
+  },
+  {
+    category: "Specialized",
+    icon: "cpu",
+    title: "Neuro-Muscular Physiotherapy",
+    desc: "Treatment for neurological disorders affecting muscle control — including multiple sclerosis, Parkinson's, and nerve injuries.",
+  },
+  {
+    category: "Services",
+    icon: "home",
+    title: "Home Visits",
+    desc: "Professional physiotherapy services at your home for patients who cannot visit the clinic.",
+  },
+];
+
+
+const categoryMeta = {
+  "We Treat":   { color: "#00507a", bg: "#e0f2fe" },
+  "Services":   { color: "#065f46", bg: "#d1fae5" },
+  "Specialized":{ color: "#6d28d9", bg: "#ede9fe" },
+};
+
+// AOS delays per card index
+const delays = [0,50,100,150,200,250,300,350,400,450,500,550,600,650];
+
+function renderServices() {
+  const grid = document.querySelector(".services-grid");
+  if (!grid) return;
+
+  grid.innerHTML = services.map((s, i) => {
+    const meta = categoryMeta[s.category];
+    return `
+      <div class="service-card" data-aos="fade-up" data-aos-delay="${delays[i] ?? 0}">
+        <div class="service-icon">
+          <i data-feather="${s.icon}"></i>
+        </div>
+        <span style="
+          display: inline-block;
+          background: ${meta.bg};
+          color: ${meta.color};
+          font-size: 0.68rem;
+          font-weight: 700;
+          padding: 2px 10px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        ">${s.category}</span>
+        <h3>${s.title}</h3>
+        <p>${s.desc}</p>
+      </div>
+    `;
+  }).join("");
+
+  if (typeof feather !== "undefined") feather.replace();
+}
+
+document.addEventListener("DOMContentLoaded", renderServices);
