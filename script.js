@@ -264,7 +264,18 @@ const services = [
     title: "Knee Pain",
     desc: "Targeted therapy for knee pain, osteoarthritis, ligament injuries, and post-surgical knee rehabilitation.",
   },
+  
   {
+    icon: "shield",
+    title: "Sports Injuries Rehabilitation",
+    desc: "Fast-track recovery for athletes — from sprains and fractures to ligament tears and muscle injuries.",
+  },
+
+];
+
+/* 
+//other serives 
+{
     icon: "map-pin",
     title: "Heel Pain",
     desc: "Treatment for plantar fasciitis, heel spurs, and Achilles-related issues that cause walking difficulty.",
@@ -286,16 +297,6 @@ const services = [
     title: "CP Child Physiotherapy",
     desc: "Gentle, specialized physiotherapy for children with cerebral palsy — improving motor skills and quality of life.",
   },
-  {
-    icon: "shield",
-    title: "Sports Injuries Rehabilitation",
-    desc: "Fast-track recovery for athletes — from sprains and fractures to ligament tears and muscle injuries.",
-  },
-
-];
-
-/* 
-//other serives 
 {
     icon: "box",
     title: "Orthopedic Physiotherapy",
