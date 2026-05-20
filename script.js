@@ -209,7 +209,6 @@ function renderTestimonials() {
         font-size: 0.72rem;
         font-weight: 700;
         padding: 3px 10px;
-        border-radius: 12px;
         margin-bottom: 12px;
       ">${t.condition}</span>
       <p class="testimonial-text">"${t.text}"</p>
