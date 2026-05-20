@@ -204,7 +204,6 @@ function renderTestimonials() {
       <div class="testimonial-stars">${buildStars(t.rating)}</div>
       <span style="
         display: inline-block;
-        background: #e8f4f8;
         color: #00507a;
         font-size: 0.72rem;
         font-weight: 700;
