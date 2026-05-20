@@ -1029,7 +1029,7 @@ body {
   padding: 14px 18px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
   max-width: 260px;
-  animation: bubbleIn 0.8s cubic-bezier(.34, 1.56, .64, 1);
+  animation: bubbleIn 2s cubic-bezier(.34, 1.56, .64, 1);
   transform-origin: bottom right;
 }
 
@@ -1059,7 +1059,6 @@ body {
   justify-content: center;
   flex-shrink: 0;
   font-size: 1.2rem;
-  background-image: url("doctor.webp");
 }
 
 .wa-bubble-text strong {
