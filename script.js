@@ -342,3 +342,16 @@ function renderServices() {
 }
 
 document.addEventListener("DOMContentLoaded", renderServices);
+
+// WhatsApp Floating Button
+const bubble  = document.getElementById('waBubble');
+  const closeBtn = document.getElementById('waClose');
+
+  // Auto-hide bubble after 6 seconds
+  setTimeout(() => bubble.classList.add('hidden'), 6000);
+
+  // Close button hides bubble
+  closeBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    bubble.classList.add('hidden');
+  });
