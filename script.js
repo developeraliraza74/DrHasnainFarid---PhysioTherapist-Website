@@ -292,7 +292,11 @@ const services = [
     desc: "Fast-track recovery for athletes — from sprains and fractures to ligament tears and muscle injuries.",
   },
 
-  {
+];
+
+/* 
+//other serives 
+{
     icon: "box",
     title: "Orthopedic Physiotherapy",
     desc: "Expert management of bone, joint, and musculoskeletal conditions for patients of all ages.",
@@ -316,10 +320,7 @@ const services = [
     icon: "home",
     title: "Home Visits",
     desc: "Professional physiotherapy services at your home for patients who cannot visit the clinic.",
-  },
-];
-
-
+  }, */
 // AOS delays per card index
 const delays = [0,50,100,150,200,250,300,350,400,450,500,550,600,650];
 
