@@ -139,16 +139,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const testimonials = [
   {
-    name: "Zarahabib",
-    date: "8 months ago",
+    name: "FARHAN SAHI",
+    date: "1 Months ago",
     source: "Google",
     rating: 5,
-    condition: "Sciatica",
-    text: "Dr. Hasnain Farid provided exceptional care for my sciatica, offering a thorough assessment and an effective treatment plan. His expertise and supportive approach greatly improved my mobility and relieved my pain. Highly recommended!",
+    condition: "Post Surgery",
+    text: "Dr Hasnain Farid is very competent and qualified young physiotherpist in swl ; i my self got treated from dr sb ,he has all latest skills and competence regarding his field...so I strongly recommend Dr Hassain Farid as a best physio in swl..😍👍👍",
   },
   {
     name: "Zafar Joyia",
-    date: "3 months ago",
+    date: "2 Months ago",
     source: "Google",
     rating: 5,
     condition: "Low Back Pain",
@@ -156,7 +156,7 @@ const testimonials = [
   },
   {
     name: "Fizza Tariq",
-    date: "2 years ago",
+    date: "3 Month ago",
     source: "Google",
     rating: 5,
     condition: "Fracture Recovery",
@@ -164,21 +164,13 @@ const testimonials = [
   },
   {
     name: "Haq Nawaz Tabassum",
-    date: "2 years ago",
+    date: "3 Months ago",
     source: "Google",
     rating: 5,
     condition: "Frozen Shoulder",
     text: "My wife got treatment for frozen shoulder. She recovered within just 9 days. Thank you Dr. Hasnain Farid — best physiotherapist in Sahiwal.",
   },
-  {
-    name: "Amna Umer",
-    date: "1 year ago",
-    source: "Google",
-    rating: 5,
-    condition: "Disc Bulge · Lumber Lordosis",
-    text: "For 3 months I had severe back pain. I consulted different doctors but nothing worked. Then I visited Dr. Hasnain — I was diagnosed with lumber lordosis and disc bulge (L3, L4, L5). After his treatment, Alhamdulillah I am perfectly fine. Highly recommend.",
-  },
-  {
+   {
     name: "Ayesha Tariq",
     date: "2 years ago",
     source: "Google",
@@ -186,6 +178,15 @@ const testimonials = [
     condition: "Low Back Pain",
     text: "My visit was for low back pain. Having been to several physiotherapists before for the same problem, I decided to visit Dr. Hasnain Farid. In just 2 sessions — plus some home exercises — my back was so much better. Remarkable.",
   },
+  {
+    name: "Amna Umer",
+    date: "6 years ago",
+    source: "Google",
+    rating: 5,
+    condition: "Disc Bulge · Lumber Lordosis",
+    text: "For 3 Months I had severe back pain. I consulted different doctors but nothing worked. Then I visited Dr. Hasnain — I was diagnosed with lumber lordosis and disc bulge (L3, L4, L5). After his treatment, Alhamdulillah I am perfectly fine. Highly recommend.",
+  },
+ 
 ];
 
 
@@ -206,7 +207,7 @@ function renderTestimonials() {
       <div class="testimonial-stars">${buildStars(t.rating)}</div>
       <span style="
         display: inline-block;
-        color: #00507a;
+        color: #fff;
         font-size: 0.72rem;
         font-weight: 700;
         padding: 3px 10px;
